@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RexWeather</string>
+    <string name="attribution">Weather data by OpenWeatherMap.org</string>
+    <string name="error_fetch_weather">Could not fetch weather data</string>
+    <string name="no_google_play">Google Play Services unavailable. This app will not work</string>
+    <string name="error_location_unavailable">Could not get current location</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="monday">Monday</string>
+    <string name="sky_is_clear">sky is clear</string>
+    <string name="nineteen_degrees">19°</string>
+    <string name="fifteen_degrees">15°</string>
+	<string name="unknow_error">Unknow Error at all.</string>
+
+</resources>

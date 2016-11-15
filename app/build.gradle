@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.jakewharton.hugo'
+
+android {
+    compileSdkVersion gradle.compileSdkVersion
+    buildToolsVersion gradle.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion gradle.minSdkVersion
+        targetSdkVersion gradle.targetSdkVersion
+        applicationId "mu.node.rx2weather.app"
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+
+retrolambda {
+    javaVersion JavaVersion.VERSION_1_6
+}
+
+dependencies {
+
+
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.patloew.rxlocation:rxlocation:1.0.0'
+    compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    compile 'com.squareup.okio:okio:1.1.0'
+    compile 'de.keyboardsurfer.android.widget:crouton:1.8.5@jar'
+
+    compile "com.android.support:support-v4:$gradle.supportLibraryVersion"
+
+    compile "io.reactivex.rxjava2:rxandroid:$gradle.rxjava2Version"
+    compile "io.reactivex.rxjava2:rxjava:$gradle.rxjava2Version"
+
+    compile "com.squareup.retrofit2:retrofit:$gradle.retrofit2Version"
+    compile "com.squareup.retrofit2:converter-gson:$gradle.retrofit2Version"
+
+    compile "com.squareup.okhttp3:okhttp:$gradle.okhttp3Version"
+    compile "com.squareup.okhttp3:okhttp-urlconnection:$gradle.okhttp3Version"
+    compile "com.squareup.okhttp3:logging-interceptor:$gradle.okhttp3Version"
+
+}
