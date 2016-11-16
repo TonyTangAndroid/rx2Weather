@@ -24,19 +24,6 @@ allprojects {
     }
 }
 
-gradle.ext {
-
-    compileSdkVersion = 25
-    buildToolsVersion = '25.0.0'
-    supportLibraryVersion = '25.0.1'
-    minSdkVersion = 16
-    targetSdkVersion = 22
-    googlePlayServicesVersion = '9.8.0'
-    rxjava2Version = '2.0.0'
-    retrofit2Version = '2.1.0'
-    okhttp3Version = '3.4.1'
-
-}
 
 task clean(type: Delete) {
     delete rootProject.buildDir
